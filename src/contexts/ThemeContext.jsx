@@ -23,7 +23,7 @@ import { createContext, useContext, useState } from "react"
         highlightColor: '#000957',
         textColor: '#ffffff',
     },
-    Sun: {
+    Purple: {
         primaryColor: '#441752',
         secondaryColor: '#8174A0 ',
         lightColor: '#A888B5',

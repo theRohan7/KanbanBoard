@@ -22,7 +22,7 @@ import { useTheme } from "../contexts/ThemeContext";
 
 function Settings() {
   const navigate = useNavigate();
-  const { theme } = useTheme();
+  const { theme, themeName, setThemeName, themes } = useTheme();
   const { userDetails } = useContext(AuthContext);
   const [name, setName] = useState(userDetails.name);
   const [email, setEmail] = useState(userDetails.email);
@@ -132,6 +132,7 @@ function Settings() {
        style={{backgroundColor: theme.secondaryColor, color: theme.textColor}}
       >
         <h1>Settings</h1>
+        <div className="settings-container" >
         <form onSubmit={handleSubmit}>
           <div className="input-div">
             <img src={usernameLogo} className="input-logo" alt="" />
@@ -219,6 +220,33 @@ function Settings() {
             {loading ? "Loading..." : "Update"}
           </button>
         </form>
+
+        <div className="theme-container" style={{marginBottom: "2rem"}}>
+          <h2>Theme Settings</h2>
+          <div className="theme-options">
+            {Object.keys(themes).map((themeName) => (
+              <div
+                key={themeName}
+                className="theme-option"
+                style={{
+                  backgroundColor: themes[themeName].primaryColor,
+                  border: `2px solid ${theme.highlightColor}`,
+                  padding: "1rem",
+                  margin: "0.5rem",
+                  borderRadius: "8px",
+                  cursor: "pointer",
+                  color: themes[themeName].textColor,
+                }}
+                onClick={() => setThemeName(themeName)}
+              >
+                {themeName}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        </div>
+       
       </div>
       <LogoutConfirmation 
         isOpen={showLogoutConfirmation}
