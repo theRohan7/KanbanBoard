@@ -1,0 +1,408 @@
+.overlay {
+   position: fixed; 
+   width: 100%; 
+   height: 100%; 
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   background-color: rgba(0,0,0,0.5); 
+   z-index: 2; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+ 
+.task-form {
+  padding: 1rem 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.1);
+  animation: slide-down 0.5s ease-out forwards;
+  margin: 1rem 2rem;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-150px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.task-input {
+  margin-bottom: 1rem;
+}
+  
+
+.task-input label {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    margin-bottom: 0.7rem;
+}
+
+.required {
+    color: red;
+}
+
+.task-input input[type="text"] {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+.priority-group label {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+.priority-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.priority-buttons{
+    display: flex;
+    gap: 1rem;
+}
+
+.priority-btn {
+    padding: 0.5rem 0.8rem;
+    border-radius: 16px;
+    border: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid #E2E2E2;
+    cursor: pointer;
+}
+
+.priority-btn:hover {
+    background-color: #E2E2E2;
+}
+.priority-btn:active {
+    background-color: #E2E2E2;
+}
+
+
+.circle-div {
+    content: '';
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    margin-right:5px;
+}
+
+.high {
+    background-color: #FF2473;
+}
+.moderate {
+    background-color: #18B0FF;
+}
+.low {
+    background-color: #63C05B;    
+}
+
+.asignee-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    position: relative;
+}
+
+.asignee-group label {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+    text-align: left;
+    width: 15%;
+}
+
+.asignee-group .dropdown-select {
+    width: 85%;
+    box-shadow: 0px 1px 2px 0px #4D40551A;
+    border: 1px solid #E2E2E2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    padding: 0.5rem 1rem ;
+    border-radius: 5px;
+    color: #9B959F; 
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    position: absolute;
+    border: 1px solid #7E7A7A14;
+    top: 100%;
+    right: 0;
+    width: 85%;
+    background-color: white;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    
+}
+
+.dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    position: relative;
+}
+
+.avatar {
+    width: 2.5rem;
+    height: 2.5rem;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 1.2rem;
+
+}
+
+.dropdown-item span {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    text-align: left;
+    color: #20102B;   
+}
+
+.dropdown-item button {
+    position: absolute;
+    right: 3%;
+    border: 1px solid #E2E2E2;
+    font-family: inter;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 21px;
+    text-align: center;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+
+    cursor: pointer;
+    background-color: transparent;
+    color: #767575;
+
+}
+
+.checklist-group {
+    overflow-y: auto;
+    min-height: 15rem;
+    max-height: 15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.checklist-group label {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: 0.5px;
+    margin-bottom: 1rem;
+    text-align: left;
+
+}
+
+.checklists-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem;
+    border: 1px solid #E2E2E2;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+.checklists-item input[type="checkbox"] {
+    margin-right: 0.5rem;
+    border: 2px solid #E2E2E2;
+    width: 1.2rem;
+    cursor: pointer;
+}
+
+.checklists-item input[type="text"] {
+    height: 1.2rem;
+    border: none;
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 19.36px;
+    text-align: left;
+    color: #000000;
+    padding: 0.5rem;
+}
+
+.checklists-item button {
+    color: red;
+    border: none;
+    font-size: 1rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.checklist-group .addChecklist-btn {
+    font-family: Inter;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 19.36px;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    display: flex;
+    margin-bottom: 10px;
+    color: #767575;
+}
+
+.bottom-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+    
+}
+
+.bottom-actions button {
+    font-family: Inter;
+   
+    font-weight: 600;
+    line-height: 19px;
+    text-align: center;
+    padding: 5px 20px;
+    margin-right: 15px;
+    border-radius: 12px;
+}
+
+.date-btn {
+    border: 1px solid #E2E2E2;
+    background-color: transparent;
+    font-family: inter;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 19px;
+    text-align: center;
+    color:  #707070;
+}
+
+
+
+.cancel-btn {
+    border: 1px solid #CF3636;
+    font-size: 1rem;
+    color: #CF3636 ;
+    background-color: transparent;
+}
+.save-btn {
+   background-color:#17A2B8;
+   font-size: 20px;
+   color: #ffffff;
+   border: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .task-form {
+      width: 90%;
+      padding: 1rem;
+      margin: 0.5rem;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+  
+    .priority-group {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .priority-buttons {
+      width: 100%;
+      justify-content: space-between;
+      gap: 10px;
+    }
+  
+    .priority-btn {
+      flex: 1;
+      justify-content: center;
+      font-size: 14px;
+      padding: 8px 5px;
+    }
+  
+    .asignee-group {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  
+    .asignee-group label {
+      width: 100%;
+    }
+  
+    .asignee-group .dropdown-select {
+      width: 100%;
+    }
+  
+    .dropdown-menu {
+      width: 100%;
+    }
+  
+    .dropdown-item {
+      padding: 12px 8px;
+    }
+  
+    .dropdown-item button {
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+  
+    .checklist-group {
+      min-height: 150px;
+      max-height: 250px;
+    }
+  
+    .checklists-item input[type="text"] {
+      width: 85%;
+      font-size: 14px;
+    }
+  
+    .bottom-actions {
+      gap: 10px;
+    }
+  
+    .bottom-actions button {
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+      font-size: 16px;
+    }
+  }

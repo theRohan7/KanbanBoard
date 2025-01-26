@@ -1,0 +1,65 @@
+
+:root {
+  /* Light Theme (Default) */
+  --primary-color: #ffffff;
+  --secondary-color: #d8d3d3;
+  --accent-color: #17A2B8;
+  --primary-text-color: #000000;
+  --secondary-text-color: #666666;
+  --border-color: #E2E2E2;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --header-bg: #7f7676;
+  --button-text: #ffffff;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --primary-color: #1a1a1a;
+  --secondary-color: #2d2d2d;
+  --accent-color: #2196F3;
+  --primary-text-color: #ffffff;
+  --secondary-text-color: #b3b3b3;
+  --border-color: #404040;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  --header-bg: #333333;
+  --button-text: #ffffff;
+}
+
+/* Pink Theme */
+[data-theme="pink"] {
+  --primary-color: #fff0f3;
+  --secondary-color: #ffccd5;
+  --accent-color: #ff4d6d;
+  --primary-text-color: #590d22;
+  --secondary-text-color: #800f2f;
+  --border-color: #ffb3c1;
+  --shadow-color: rgba(255, 77, 109, 0.1);
+  --header-bg: #ff8fa3;
+  --button-text: #ffffff;
+}
+
+/* Green Theme */
+[data-theme="green"] {
+  --primary-color: #f0fff4;
+  --secondary-color: #c6f6d5;
+  --accent-color: #48bb78;
+  --primary-text-color: #22543d;
+  --secondary-text-color: #276749;
+  --border-color: #9ae6b4;
+  --shadow-color: rgba(72, 187, 120, 0.1);
+  --header-bg: #68d391;
+  --button-text: #ffffff;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: Inter;
+}
